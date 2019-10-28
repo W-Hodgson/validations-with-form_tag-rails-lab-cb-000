@@ -14,6 +14,9 @@ class PostsController < ApplicationController
 
     if @post.valid?
       redirect_to post_path(@post)
+    else
+
+    end
   end
 
   private
