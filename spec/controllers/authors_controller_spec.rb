@@ -12,12 +12,7 @@ RSpec.describe AuthorsController do
 
   before { @author = Author.create!(attributes) }
 
-  describe "showing an author" do
-    it "shows an author" do
-      get :show, id: @author.id
-      expect(found).to eq(@author)
-    end
-  end
+
 
   describe "creating a valid author" do
     let(:bro_attributes) do
