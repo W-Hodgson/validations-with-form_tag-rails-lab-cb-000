@@ -29,11 +29,6 @@ RSpec.describe PostsController do
       @article.update(new_attributes)
       expect(found.title).to eq(new_attributes[:title])
     end
-
-    it "redirects to show page" do
-      patch :update, new_attributes
-      expect(response).to redirect_to(post_path(@article))
-    end
   end
 
   describe "making invalid updates" do
