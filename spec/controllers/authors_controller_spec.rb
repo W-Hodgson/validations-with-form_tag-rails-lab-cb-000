@@ -12,8 +12,6 @@ RSpec.describe AuthorsController do
 
   before { @author = Author.create!(attributes) }
 
-
-
   describe "creating a valid author" do
     let(:bro_attributes) do
       {
