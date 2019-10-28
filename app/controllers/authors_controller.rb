@@ -11,12 +11,12 @@ class AuthorsController < ApplicationController
     @author = Author.new(author_params)
 
     if @author.valid?
-
+      redirect_to author_path(@author)
     else
 
     end
 
-    redirect_to author_path(@author)
+
   end
 
   private
