@@ -8,7 +8,7 @@ class AuthorsController < ApplicationController
   end
 
   def create
-    @author = Author.new(author_params)
+    @author = Author.new(params.require(:author).permit(:name, :email, :phone_number))
 
     if @author.valid?
       @author.save
